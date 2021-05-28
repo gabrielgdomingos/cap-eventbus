@@ -1,5 +1,6 @@
 ﻿using DotNetCore.CAP;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace CAPWebApi.Receivers
 {
@@ -15,7 +16,7 @@ namespace CAPWebApi.Receivers
         [CapSubscribe("helloWorld")]
         public void Handle(string value)
         {
-            _logger.Log(LogLevel.Debug, value);
+            _logger.LogInformation($"{value} {DateTime.Now}");
         }
     }
 }

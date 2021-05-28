@@ -18,7 +18,7 @@ namespace CAPWebApi.Controllers
         [Route("sample")]
         public async Task<IActionResult> Sample()
         {
-            await _capPublisher.PublishAsync("helloWorld", "CodeOpinion");
+            await _capPublisher.PublishAsync("helloWorld", "Hello World");
 
             return Ok();
         }
