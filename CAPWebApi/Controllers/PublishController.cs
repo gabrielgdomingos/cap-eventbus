@@ -15,10 +15,9 @@ namespace CAPWebApi.Controllers
             _capPublisher = capPublisher;
         }
 
-        [Route("sample")]
-        public async Task<IActionResult> Sample()
+        public async Task<IActionResult> Publish()
         {
-            await _capPublisher.PublishAsync("helloWorld", "Hello World");
+            await _capPublisher.PublishAsync("hello", "Hello World");
 
             return Ok();
         }

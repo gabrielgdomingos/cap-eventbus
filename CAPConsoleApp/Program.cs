@@ -8,7 +8,7 @@ namespace CAPConsoleApp
 {
     public static class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             var container = new ServiceCollection();
 
@@ -17,7 +17,6 @@ namespace CAPConsoleApp
             container.AddCap(x =>
             {
                 x.UseInMemoryStorage();
-                //x.UseInMemoryMessageQueue();
 
                 x.DefaultGroupName = $"cap.queue.{Assembly.GetExecutingAssembly().GetName().Name.ToLower()}";
                 x.Version = "v1";

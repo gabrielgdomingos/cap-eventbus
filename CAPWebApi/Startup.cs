@@ -1,5 +1,4 @@
 ﻿using CAPWebApi.DbContexts;
-using CAPWebApi.Receivers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -55,10 +54,9 @@ namespace CAPWebApi
                 });
             });
 
-            services.AddTransient<HelloWorldReceiver>();
+            services.AddTransient<EventSubscriber>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAPWebApi", "CAPWebApi\CAPWebApi.csproj", "{01BD03D1-A7B7-4D6B-ABC6-ED425654BEF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAPConsoleApp", "CAPConsoleApp\CAPConsoleApp.csproj", "{B5737F78-4A31-40DC-A118-6998D0C1E52E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAPConsoleApp", "CAPConsoleApp\CAPConsoleApp.csproj", "{B5737F78-4A31-40DC-A118-6998D0C1E52E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
