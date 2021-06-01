@@ -10,6 +10,8 @@ namespace CAPWebApi.Controllers
     {
         private readonly ICapPublisher _capPublisher;
 
+        private static int _counter = 1;
+
         public PublishController(ICapPublisher capPublisher)
         {
             _capPublisher = capPublisher;
@@ -17,7 +19,9 @@ namespace CAPWebApi.Controllers
 
         public async Task<IActionResult> Publish()
         {
-            await _capPublisher.PublishAsync("hello", "Hello World");
+            await _capPublisher.PublishAsync("hello", _counter.ToString());
+
+            _counter++;
 
             return Ok();
         }

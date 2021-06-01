@@ -41,7 +41,7 @@ namespace CAPWebApi
                 x.Version = "v1";
                 x.FailedRetryInterval = 60;
                 x.ConsumerThreadCount = 1;
-                x.FailedRetryCount = 50;
+                x.FailedRetryCount = 50; //São 50 tentativas instantaneamente pra tentar achar um consumidor "bindado";
 
                 x.UseRabbitMQ(x =>
                 {
